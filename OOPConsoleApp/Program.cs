@@ -1,4 +1,7 @@
-﻿namespace OOPConsoleApp
+﻿using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+
+namespace OOPConsoleApp
 {
     class Human
     {
@@ -61,12 +64,27 @@
         }
         public int Square() => a * b;
     }
-        internal class Program
+    class Employee
+    {
+        public Department Department;
+    }
+
+    class Department
+    {
+        public Company Company;
+    }
+
+    class Company
+    {
+        public string Name;
+    }
+    internal class Program
     {
         static void Main(string[] args)
         {
-            Pen pen = new Pen { color = "", cost = 30 };
-            Console.WriteLine("Hello, World!");
+            Employee employee = new Employee();
+            string name = employee?.Department?.Company?.Name;
+            Console.WriteLine("Merry Christmas");
         }
     }
 }
