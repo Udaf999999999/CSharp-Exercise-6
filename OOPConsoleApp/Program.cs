@@ -44,46 +44,37 @@ namespace OOPConsoleApp
             this.cost = cost;
         }
     }
-    public class Rectangle
+    
+    public class Shape
     {
-        int a, b;
-        public Rectangle(int a, int b)
+        float[] sides;
+        public float GetSquare()
         {
-            this.a = a;
-            this.b = b;
+            return sides[0];
         }
-        public Rectangle(int a)
+        public float GetPerimeter()
         {
-            this.a = a;
-            b = a;
+            return sides[0];
         }
-        public Rectangle()
-        {
-            a = 6;
-            b = 4;
-        }
-        public int Square() => a * b;
     }
-    class Employee
+    public class Tryange: Shape
     {
-        public Department Department;
+
+    }
+    public class Rectangle : Shape
+    {
+
+    }
+    public class Circle : Shape
+    {
+
     }
 
-    class Department
-    {
-        public Company Company;
-    }
-
-    class Company
-    {
-        public string Name;
-    }
     internal class Program
     {
         static void Main(string[] args)
         {
-            Employee employee = new Employee();
-            string name = employee?.Department?.Company?.Name;
+
             Console.WriteLine("Merry Christmas");
         }
     }
